@@ -14,6 +14,7 @@ from routes.edit.expand_route import router as expand_router
 # from routes.edit.enhance_route import router as enhance_router
 # from routes.edit.upscale_route import router as upscale_router
 # from routes.edit.crop_fg_route import router as crop_fg_router
+from routes.edit.generate_full_descriptions_route import router as generate_full_descriptions_router
 
 app = FastAPI()
 
@@ -39,3 +40,4 @@ app.include_router(expand_router)
 # app.include_router(enhance_router)
 # app.include_router(upscale_router)
 # app.include_router(crop_fg_router)
+app.include_router(generate_full_descriptions_router)

@@ -29,4 +29,5 @@ def unified_generate(req: UnifiedRequest):
         payload["structured_prompts"] = req.structured_prompts
 
     data = submit_async_request(payload)
+    print("Submission response data:", data)
     return poll_status(data["status_url"])
