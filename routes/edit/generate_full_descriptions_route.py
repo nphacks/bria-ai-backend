@@ -17,7 +17,7 @@ class StructuredRequest(BaseModel):
 def llm_describe_dict(data: dict) -> str:
     """Call OpenRouter to describe any dict as a paragraph."""
     flattened = "\n".join(f"{k}: {v}" for k, v in data.items() if v is not None)
-    prompt = f"Write a single, well-written descriptive paragraph based on the following information:\n{flattened}"
+    prompt = f"Donot embelish, only write in simple sentences. Write a single, well-written descriptive paragraph based on the following information:\n{flattened}"
 
     try:
         response = requests.post(
