@@ -10,8 +10,8 @@ Setup
 
 Add the following variables:
 
-`BRIA_API_TOKEN=your_bria_api_token
-OPENROUTER_API_KEY=your_openrouter_api_key`
+`BRIA_API_TOKEN=your_bria_api_token`
+`OPENROUTER_API_KEY=your_openrouter_api_key`
 
 3. Run the server
 ```uvicorn main:app --reload```
@@ -23,8 +23,11 @@ Server runs at:
 What this backend does
 
 * Proxies Bria AI for image generation & editing
+  * services folder has the usage of BRIA AI API
+  * routes folder has files that call these services
 * Uses Gemma (OpenRouter) to process structured image metadata
 * Provides endpoints for:
   * Creating characters & shots
   * Editing images (erase, inpaint, remix, etc.)
   * Advanced Remix with structured JSON transformation
+
